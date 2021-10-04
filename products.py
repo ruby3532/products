@@ -14,5 +14,8 @@ print(products)
 	# 可以有更快的寫法： p = [name , price]
 	# 最精簡的寫法：products.append([name , price])
 
+# products[0][0] # product 中第 0 格中的第 0 格。
 
-products[0][0] # product 中第 0 格中的第 0 格。
+for p in products:
+	print(p[0], '的價格是', p[1])
+
