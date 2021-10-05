@@ -26,6 +26,7 @@ with open ('products.csv', 'w', encoding = 'utf-8') as f:   # 寫入模式，用
 		f.write(p[0] + ',' + str(p[1]) + '\n') # 用加法合併字串open。f.write 才是真的寫入
 # csv 是很常儲存數據的格式
 # with 是自動 close 的功能
+# 若祇是單純中文會亂碼，需要用 encoding = 'utf-8' 處理
 
 # 字串的加和乘法
 # 'abc' + '123' = 'abc123'
