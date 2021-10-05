@@ -20,7 +20,8 @@ print(products)
 for p in products:
 	print(p[0], '的價格是', p[1])
 
-with open ('products.csv', 'w') as f:   # 寫入模式，用 f 稱做 products.txt 檔
+with open ('products.csv', 'w', encoding = 'utf-8') as f:   # 寫入模式，用 f 稱做 products.txt 檔
+	f.write('商品,價格\n')
 	for p in products:
 		f.write(p[0] + ',' + str(p[1]) + '\n') # 用加法合併字串open。f.write 才是真的寫入
 # csv 是很常儲存數據的格式
