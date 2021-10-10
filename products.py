@@ -1,12 +1,23 @@
-# 讀取檔案
-products = []
-with open('products.csv' , 'r' , encoding = 'utf-8') as f:
-	for line in f:
-		if '商品,價格' in line:
-			continue # 不會跳出迴圈，會直接跳到下一回
+import os # operating system 作業系統
+
+products = [] # 不管檔案是否存在，都要執行此指令
+if os.path.isfile('products.csv'):
+	print('yaaa 找到檔案了')
+	with open('products.csv' , 'r' , encoding = 'utf-8') as f:
+		for line in f:
+			if '商品,價格' in line:
+				continue # 不會跳出迴圈，會直接跳到下一回
 		name, price = line.strip().split(',')
 		products.append([name , price])
-print(products)
+	print(products)
+
+else:
+	print('找不到檔案.....')
+
+
+# 讀取檔案
+
+
 
 # 讓使用者輸入
 while True:
